@@ -238,6 +238,7 @@ imgui: /usr/local/lib/libopencv_stitching.so.4.9.0
 imgui: /usr/local/lib/libopencv_video.so.4.9.0
 imgui: /usr/local/lib/libopencv_videoio.so.4.9.0
 imgui: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
+imgui: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 imgui: /usr/local/lib/libopencv_imgcodecs.so.4.9.0
 imgui: /usr/local/lib/libopencv_dnn.so.4.9.0
 imgui: /usr/local/lib/libopencv_calib3d.so.4.9.0

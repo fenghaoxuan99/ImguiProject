@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/feng/MyCppProject/Imgui/PRIVATE -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/usr/include/python3.8 -I/home/feng/pybind/include/pybind11 -I/home/feng/MyCppProject/Imgui/PRIVATE -isystem /usr/local/include/opencv4 
 

@@ -254,8 +254,20 @@ OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
+//Path to a library.
+Python3_LIBRARY_DEBUG:FILEPATH=
+
+//Path to a library.
+Python3_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
+
 //Path to a program.
 _Python3_EXECUTABLE:FILEPATH=/usr/bin/python3.8
+
+//Path to a file.
+_Python3_INCLUDE_DIR:PATH=/usr/include/python3.8
+
+//Path to a library.
+_Python3_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/glfw3
@@ -419,7 +431,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.9.0()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.8][/usr/lib/x86_64-linux-gnu/libpython3.8.so][/usr/include/python3.8][cfound components: Interpreter Development ][v3.8.10()]
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
@@ -438,9 +450,20 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Python3_LIBRARY_DEBUG
+Python3_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Python3_LIBRARY_RELEASE
+Python3_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: _Python3_DEVELOPMENT_SIGNATURE
+_Python3_DEVELOPMENT_SIGNATURE-ADVANCED:INTERNAL=1
+_Python3_DEVELOPMENT_SIGNATURE:INTERNAL=4a4167209e8a167eff1f1b37da22ba0f
 //ADVANCED property for variable: _Python3_EXECUTABLE
 _Python3_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: _Python3_INCLUDE_DIR
+_Python3_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: _Python3_INTERPRETER_SIGNATURE
 _Python3_INTERPRETER_SIGNATURE-ADVANCED:INTERNAL=1
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
+//ADVANCED property for variable: _Python3_LIBRARY_RELEASE
+_Python3_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 
