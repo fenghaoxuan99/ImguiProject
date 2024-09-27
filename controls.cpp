@@ -7,7 +7,7 @@ void SliderInt::RenderSlider() {
 	ImGui::AlignTextToFramePadding();
 	ImGui::Dummy(ImVec2(_spacing, 0));
 	ImGui::SameLine();
-	ImGui::Text(_text.c_str());
+	ImGui::Text("%s",_text.c_str());
 	ImGui::SameLine();
 	ImGui::PushItemWidth(_sliderwidth);
 	ImGui::PushID(_ID.c_str());
@@ -30,7 +30,7 @@ void DisplayText::RenderTextBox() {
 	ImGui::BeginChild("Text Area", _SizeTextBox);
 
 	for (std::string infor : _Information) {
-    ImGui::TextWrapped(infor.c_str());
+    ImGui::TextWrapped("%s",infor.c_str());
 	}
 
 	ImGui::EndChild();

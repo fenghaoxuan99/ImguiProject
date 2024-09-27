@@ -3,7 +3,7 @@
 
 
 
-int  GetAllDriveString(std::vector<std::string>& rootDirectories);
+void  GetAllDriveString(std::vector<std::string>& rootDirectories);
 
 void ShowFileBrowser(const std::string& rootPath, std::string& selectedPath, const std::string& filterExt);
 

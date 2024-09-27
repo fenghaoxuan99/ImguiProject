@@ -4,14 +4,14 @@ project(imgui VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
 find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(OpenCV REQUIRED CONFIG)
-find_package(Python3 COMPONENTS Interpreter REQUIRED)
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-include_directories(${Python3_INCLUDE_DIRS})
-# include_directories(${Opencv_INCLUDE_DIRS})
-
+include_directories(/usr/include/python3.8)
+include_directories(/home/feng/pybind/include/pybind11)
 include_directories(${OpenCV_INCLUDE_DIRS} PRIVATE ${OpenCV_INCLUDE_DIRS})
 #添加链接库
 link_libraries(${OpenCV_LIBS} ${OpenCV_LIBS})

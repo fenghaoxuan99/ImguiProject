@@ -6,7 +6,7 @@
 
 namespace py = pybind11;
 
-class RunPython {
+class __attribute__((visibility("default"))) RunPython {
 public:
     RunPython(const std::string& ModulePath) : _ModulePath(ModulePath), guard{} {
         try {
@@ -79,8 +79,8 @@ public:
     }
 
 private:
-    py::scoped_interpreter guard;  // ³õÊ¼»¯ºÍ¹ÜÀíPython½âÊÍÆ÷
+    py::scoped_interpreter guard;  // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Í¹ï¿½ï¿½ï¿½Pythonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     std::string _ModulePath;
-    py::module _Module;            // ´æ´¢PythonÄ£¿é
-    py::object _Results;           // ´æ´¢Pythonº¯ÊýµÄ·µ»Ø½á¹û
+    py::module _Module;            // ï¿½æ´¢PythonÄ£ï¿½ï¿½
+    py::object _Results;           // ï¿½æ´¢Pythonï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½Ø½ï¿½ï¿½
 };

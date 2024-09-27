@@ -8,7 +8,7 @@
 
 namespace fs = std::filesystem;
 
-int GetAllDriveString(std::vector<std::string>& rootDirectories) {
+void GetAllDriveString(std::vector<std::string>& rootDirectories) {
   const char* rootpath = getenv("HOME");
   rootDirectories.emplace_back(rootpath);
 }
@@ -29,7 +29,7 @@ void ShowFileBrowser(const std::string& rootPath, std::string& selectedPath, con
             if (!filterExt.empty() && entry.path().extension() != filterExt) {
                 continue;
             }
-            ImGui::PushStyleColor(ImGuiCol_HeaderActive, ImVec4(1.0f, 0.0f, 0.0f, 1.0f)); // ���ü���ʱ����ɫ
+            ImGui::PushStyleColor(ImGuiCol_HeaderActive, ImVec4(1.0f, 0.0f, 0.0f, 1.0f)); 
             if (ImGui::Selectable(fileName.c_str())) {
                 selectedPath = entry.path().string();
                
@@ -42,17 +42,14 @@ void ShowFileBrowser(const std::string& rootPath, std::string& selectedPath, con
 
 void GetAllImagePath(std::string ImagePath, std::vector<std::string>& AllImagePathVector) {
     for (const auto& _entry : fs::directory_iterator(ImagePath)) {
-    
         if (_entry.path().extension()==".png") {
             AllImagePathVector.emplace_back(_entry.path().string());
         }
-
     }
-
 }
 
+
 int extractNumber(const std::string& filename) {
-  
     size_t pos = filename.find_last_of('_');
     if (pos == std::string::npos) return -1; 
     std::string numberStr = filename.substr(pos + 1,2);
@@ -65,20 +62,26 @@ void FileBrowserWindow(bool* isOpen, std::string& selectedFile, std::vector<std:
     if (!(*isOpen)) {
         return;  
     }
-
+    static bool tempbool = true;
+    if(tempbool){
     ImGui::SetNextWindowSize(ImVec2(500, 400));
+    tempbool = false;
+    }
+
     ImGui::SetNextWindowFocus();
- 
     ImGui::Begin("File Browser", isOpen, ImGuiWindowFlags_NoCollapse);
     
-    static std::string rootPath = fs::current_path().string();
+    static std::string rootPath = fs::current_path().parent_path().string();
     static std::string selectedPath;
    
 
-    char fileExtensionFilter[50] = "";
-
-
-    ImGui::Text("Root Path");
+ 
+    const std::vector<std::string> ExtensionVector = { ".png", ".jpg", ".tif", ".ppm", ".pgm"};
+    static std::string Extension = ".png";
+   
+    ImGui::AlignTextToFramePadding();
+    ImGui::Text("根目录:");
+    ImGui::SameLine();
     for (size_t i = 0; i < RootPathVector.size(); i++) {
         if (i > 0) ImGui::SameLine();
         if (ImGui::Button(RootPathVector[i].c_str())) {
@@ -87,30 +90,31 @@ void FileBrowserWindow(bool* isOpen, std::string& selectedFile, std::vector<std:
     }
 
     ImGui::Separator();
-
-   
-    ImGui::Text("Filter: ");
+    ImGui::AlignTextToFramePadding();
+    ImGui::Text("文件类型:");
     ImGui::SameLine();
-    ImGui::InputText("##fileFilter", fileExtensionFilter, IM_ARRAYSIZE(fileExtensionFilter));
+    for (size_t i = 0; i < ExtensionVector.size(); i++) {
+        if (i > 0) ImGui::SameLine();
+        if (ImGui::Button(ExtensionVector[i].c_str())) {
+            Extension = ExtensionVector[i];
+        }
+    }
 
-    ShowFileBrowser(rootPath, selectedPath, fileExtensionFilter);
+
+    ShowFileBrowser(rootPath, selectedPath, Extension);
     fs::path temppath1 (selectedPath);
     std::string temppath= temppath1.parent_path().string();
-
-
 
     if (!selectedPath.empty()) {
         ImGui::Separator();
         ImGui::Text("Selected File: %s", selectedPath.c_str());
 
-        
         if (ImGui::Button("Confirm")) {
             selectedFile = selectedPath;
             AllImagePathVector.clear();
             for (const auto& _entry : fs::directory_iterator(temppath)) {
                 if (_entry.path().extension() == ".png") {
                     AllImagePathVector.emplace_back(_entry.path().string());
-                    
                 }
             }
             std::sort(AllImagePathVector.begin(), AllImagePathVector.end(), [](const std::string& a, const std::string& b) {

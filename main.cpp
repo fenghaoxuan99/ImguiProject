@@ -21,7 +21,7 @@
 #include "display.h"
 #include "controls.h"
 #include "layout.h"
-// #include "runpython.h"
+#include "runpython.h"
 GLFWwindow* Windows; 
 
 int main()
@@ -39,11 +39,11 @@ int main()
 	
 
 
-	// RunPython python("DemoModule");     //模型路径
-	// python.LoadModule("DemoModule");    //模型名字 无后缀
-	// python.Function("add",3,5);         //函数名  参数
-	// py::object result = python.GetResults();
-	// std::cout << result.cast<int>() << std::endl;
+	RunPython python("../DemoModule");     //模型路径
+	python.LoadModule("DemoModule");    //模型名字 无后缀
+	python.Function("add",3,5);         //函数名  参数
+	py::object result = python.GetResults();
+	std::cout << result.cast<int>() << std::endl;
 
 
 	ImGuiIO& io = ImGui::GetIO(); (void)io;

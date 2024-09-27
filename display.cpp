@@ -1,13 +1,6 @@
 
 
 #include"display.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <filesystem>
-#include "imgui/imgui.h"
-#include <GLFW/glfw3.h>
-#include <opencv2/opencv.hpp>
 
 namespace fs = std::filesystem;
  void DisplayImage::GetImage(cv::Mat &image) {
