@@ -22,6 +22,7 @@
 #include "controls.h"
 #include "layout.h"
 #include "runpython.h"
+
 GLFWwindow* Windows; 
 
 int main()

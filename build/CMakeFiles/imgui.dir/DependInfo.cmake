@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/feng/MyCppProject/Imgui/controls.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/controls.cpp.o"
-  "/home/feng/MyCppProject/Imgui/display.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/display.cpp.o"
-  "/home/feng/MyCppProject/Imgui/getpath.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/getpath.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui_draw.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui_impl_glfw.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui_impl_glfw.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui_impl_opengl3.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui_impl_opengl3.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui_tables.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o"
-  "/home/feng/MyCppProject/Imgui/imgui/imgui_widgets.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o"
-  "/home/feng/MyCppProject/Imgui/layout.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/layout.cpp.o"
-  "/home/feng/MyCppProject/Imgui/main.cpp" "/home/feng/MyCppProject/Imgui/build/CMakeFiles/imgui.dir/main.cpp.o"
+  "/home/feng/MyCppProject/controls.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/controls.cpp.o"
+  "/home/feng/MyCppProject/display.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/display.cpp.o"
+  "/home/feng/MyCppProject/getpath.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/getpath.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui_draw.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui_impl_glfw.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui_impl_glfw.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui_impl_opengl3.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui_impl_opengl3.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui_tables.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.o"
+  "/home/feng/MyCppProject/imgui/imgui_widgets.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.o"
+  "/home/feng/MyCppProject/layout.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/layout.cpp.o"
+  "/home/feng/MyCppProject/main.cpp" "/home/feng/MyCppProject/build/CMakeFiles/imgui.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

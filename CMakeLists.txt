@@ -9,6 +9,7 @@ find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(OpenCV REQUIRED CONFIG)
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+find_package(pybind11 REQUIRED )
 
 include_directories(/usr/include/python3.8)
 include_directories(/home/feng/pybind/include/pybind11)
